@@ -27,7 +27,7 @@
                     <td>{{ $data->buy_price }}</td>
                     <td>{{ $data->sell_price }}</td>
                     <td>{{ $data->created_at }}</td>
-                    <td><img src="{{ Storage::disk('s3')->url('public/').$data->image }}" class="rounded" style="width: 100px"></td>
+                    <td><img src="{{ Storage::url('public/').$data->image }}" class="rounded" style="width: 100px"></td>
                     @if(auth()->user()->role =='admin')         
                     <td class="text-center">
                         <a href="/edit/{{ $data->id }}" class="btn btn-sm btn-primary">EDIT</a>
